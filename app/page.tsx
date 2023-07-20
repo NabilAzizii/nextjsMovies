@@ -26,7 +26,7 @@ export default async function Home() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
           {data.results.map((movie) => (
-            <div className="flex flex-col overflow-hidden rounded-lg border bg-white">
+            <div key={movie.id} className="flex flex-col overflow-hidden rounded-lg border bg-white">
               <Link className="group relative block h-48 overflow-hidden bg-gray-100 md:h-64" href={`/movie/${movie.id}`}>
                 <Image
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
